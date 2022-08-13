@@ -1085,7 +1085,7 @@ Citizen.CreateThread(function()
 		}
 	})
 
-	AddCircleZone("tabletVehicles01",vector3(-38.9,-1100.22,27.26),0.75,{
+	AddCircleZone("tabletVehicles01",vector3(-55.34,-1096.43,26.42),0.75,{
 		name = "tabletVehicles01",
 		heading = 3374176
 	},{
