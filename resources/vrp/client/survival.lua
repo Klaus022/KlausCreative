@@ -130,7 +130,7 @@ Citizen.CreateThread(function()
 					TriggerEvent("radio:outServers")
 					TriggerServerEvent("inventory:Cancel")
 					TriggerEvent("inventory:clearWeapons")
-					exports["smartphone"]:closeSmartphone()
+					--exports["smartphone"]:closeSmartphone() Comentado para quem não utiliza o celular da hydra/jester
 					TriggerServerEvent("paramedic:bloodDeath")
 					TriggerServerEvent("pma-voice:toggleMute",true)
 
