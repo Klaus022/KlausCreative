@@ -7,7 +7,7 @@ $(document).ready(function(){
 				<div class="timer-bar ${notifyNumber}"></div>
 			</div>`;
 
-			$(html).fadeIn(500).appendTo("#notifications").delay(event["data"]["timer"]).fadeOut(500);
+			$(html).appendTo("#notifications").hide().show("slide",{ direction: "right" },100).delay(event["data"]["timer"]).hide("slide",{ direction: "right" },100);
 			$(`.${notifyNumber}`).css("transition",`width ${event["data"]["timer"]}ms`);
 
 			setTimeout(() => {
@@ -19,8 +19,14 @@ $(document).ready(function(){
 		if (event["data"]["shortcuts"] !== undefined){
 			if (event["data"]["shortcuts"] == true){
 				if ($("#Shortcuts").css("display") === "none"){
-					$("#Shortcuts").css("display","flex");
+					$("#Shortcuts").css("display","block");
 				}
+
+				$(".Shorts-1").attr("data-value","1");
+				$(".Shorts-2").attr("data-value","2");
+				$(".Shorts-3").attr("data-value","3");
+				$(".Shorts-4").attr("data-value","4");
+				$(".Shorts-5").attr("data-value","5");
 
 				if (event["data"]["shorts"][1] !== ""){
 					$(".Shorts-1").css("background-image",`url(nui://inventory/web-side/images/${event["data"]["shorts"][1]}.png)`);
@@ -52,7 +58,7 @@ $(document).ready(function(){
 					$(".Shorts-5").css("background-image","none");
 				}
 			} else {
-				if ($("#Shortcuts").css("display") === "flex"){
+				if ($("#Shortcuts").css("display") === "block"){
 					$("#Shortcuts").css("display","none");
 				}
 			}
