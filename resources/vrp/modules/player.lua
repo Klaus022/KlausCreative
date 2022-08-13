@@ -212,6 +212,19 @@ function vRP.downgradeThirst(user_id,amount)
 	end
 end
 -----------------------------------------------------------------------------------------------------------------------------------------
+-- SPAWN:CORECTION SPAWN ID
+-----------------------------------------------------------------------------------------------------------------------------------------
+local identity = vRP.userIdentity(user_id)
+    if identity then
+        TriggerClientEvent("vRP:playerActive",source,user_id,identity["name"].." "..identity["name2"])
+
+        local Identities = vRP.getIdentities(source)
+        local infoAccount = vRP.infoAccount(Identities)
+        if Identities ~= identity["steam"] then
+            vRP.kick(user_id,"Expulso da cidade.")
+        end
+    end
+-----------------------------------------------------------------------------------------------------------------------------------------
 -- DOWNGRADEHUNGER
 -----------------------------------------------------------------------------------------------------------------------------------------
 function vRP.downgradeHunger(user_id,amount)
