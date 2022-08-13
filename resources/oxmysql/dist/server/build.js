@@ -16013,7 +16013,7 @@ var init_pool = __esm({
       connectTimeout: 6e4
     }, connectionString));
     pool.query(mysql_transaction_isolation_level).then(() => {
-      console.log(`^2Database server connection established!^0`);
+      console.log(`^2Database server connection established! #RazeStore^0`);
     }).catch((err) => {
       console.error(`^3Unable to establish a connection to the database! [${err.code}]
 ${err.message}^0`);
