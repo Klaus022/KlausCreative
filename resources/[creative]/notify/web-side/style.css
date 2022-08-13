@@ -138,7 +138,7 @@ html,body {
 }
 
 #Shortcuts {
-	top: 22%;
+	top: 5%;
 	left: 50px;
 	bottom: 18%;
 	height: 60%;
@@ -161,7 +161,7 @@ html,body {
 }
 
 #Shortcuts div::after {
-	top: 34px;
+	top: 50px;
 	width: 31px;
 	right: -15px;
 	padding: 8px 0;
