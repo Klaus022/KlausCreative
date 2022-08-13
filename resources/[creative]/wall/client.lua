@@ -48,9 +48,9 @@ AddEventHandler(GlobalState["creative_wall"]..":wall",function(val)
     wall = val
  --   print("Wall: "..tostring(val))
     if wall then
-        notify("Wall Ativado!")
+        TriggerEvent("Notify","verde","Wall Ativado!",3000)
     else
-        notify("Wall Desativado!")
+        TriggerEvent("Notify","vermelho","Wall Desativado!",3000)
     end
 end)
 
@@ -133,7 +133,7 @@ Citizen.CreateThread(
                                 
                                 if not IsEntityVisible(nped_id) then
                                     tab = tab.."\n"
-                                    DrawTextW(x2, y2, z2+0.15,tab.."~r~INVISIVEL~w~")
+                                    DrawTextW(x2, y2, z2+0.15,tab.."~r~Invisivel~w~")
                                     linecolour = false
                                 end
 

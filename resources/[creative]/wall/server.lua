@@ -9,7 +9,7 @@ vRP = module("vrp","lib/Proxy").getInterface("vRP")
 -----------------------------------------------------------------------------------------------------------------------------------------
 --[ WEBHOOK ]----------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------
-local webhookwall = ""
+local wall = ""
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- WEBHOOK
@@ -44,12 +44,12 @@ RegisterCommand("wall",function(source,args)
 			wall_infos[source].wallstats = false
 			TriggerClientEvent(chain..":wall",source,wall_infos[source].wallstats)
 	--		print(json.encode(wall_infos,{indent = true}))
-			SendWebhookMessage(webhookwall,"```prolog\n[ID]:" ..user_id.. " DESLIGOU - wall  "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+			SendWebhookMessage(wall,"```prolog\n[ID]:" ..user_id.. " Desligou - Wall  "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 		else
 			wall_infos[source].wallstats = true
 			TriggerClientEvent(chain..":wall",source,wall_infos[source].wallstats)
 	--		print(json.encode(wall_infos,{indent = true}))
-			SendWebhookMessage(webhookwall,"```prolog\n[ID]:" ..user_id.. " LIGOU - wall  "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+			SendWebhookMessage(wall,"```prolog\n[ID]:" ..user_id.. " Ligou - Wall  "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 		end
 	end
 end)
