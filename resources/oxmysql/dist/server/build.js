@@ -16205,13 +16205,7 @@ var init_deprecated = __esm({
     init_execute();
     init_query();
     init_transaction();
-    deprecated = (invokingResource) => {
-      setTimeout(() => {
-        console.log(`^3[WARNING] ${invokingResource} triggered a deprecated function! Exports from prior to v1.9.0 will be removed in a future update.
-      Refer to the readme for information on updating.^0`);
-      }, 500);
-      deprecated = void 0;
-    };
+    
     global.exports("execute", (query, parameters, cb, invokingResource = GetInvokingResource()) => {
       if (deprecated !== void 0)
         deprecated(invokingResource);
