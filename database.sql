@@ -24,6 +24,21 @@ CREATE TABLE IF NOT EXISTS `summerz_accounts` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `smartphone_bank`
+--
+
+CREATE TABLE IF NOT EXISTS `smartphone_bank` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `extrato` varchar(255) DEFAULT NULL,
+  `data` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `summerz_bank`
 --
 
