@@ -123,6 +123,15 @@ vRP.prepare("fidentity/newIdentity","INSERT INTO summerz_fidentity(name,name2,lo
 --vRP.prepare("smartphone/cleanMessages","DELETE FROM smartphone_whatsapp_messages WHERE created_at < (UNIX_TIMESTAMP() - 86400 * 7)")
 --vRP.prepare("summerz/cleanBanks","DELETE FROM smartphone_bank WHERE (DATEDIFF(CURRENT_DATE,data) >= 7)")
 -----------------------------------------------------------------------------------------------------------------------------------------
+-- WAREHOUSES
+-----------------------------------------------------------------------------------------------------------------------------------------
+vRP.prepare("warehouses/getWarehouses","SELECT * FROM summerz_warehouses WHERE name = @name")
+vRP.prepare("warehouses/getownerWarehouses","SELECT * FROM summerz_warehouses WHERE name = @name AND user_id = @user_id")
+vRP.prepare("warehouses/upgradeWarehouses","UPDATE summerz_warehouses SET weight = weight + 10 WHERE name = @name")
+vRP.prepare("warehouses/checkpassWarehouses","SELECT * FROM summerz_warehouses WHERE name = @name AND password = @password")
+vRP.prepare("warehouses/updatepassWarehouses","UPDATE summerz_warehouses SET password = @password WHERE name = @name AND user_id = @user_id")
+vRP.prepare("warehouses/buyWarehouses","INSERT IGNORE INTO summerz_warehouses(name,weight,password,user_id) VALUES(@name,@weight,@password,@user_id)")
+-----------------------------------------------------------------------------------------------------------------------------------------
 -- CLEARTABLES
 -----------------------------------------------------------------------------------------------------------------------------------------
 vRP.prepare("summerz/playerdata","DELETE FROM summerz_playerdata WHERE dvalue = '[]' OR dvalue = '{}'")
