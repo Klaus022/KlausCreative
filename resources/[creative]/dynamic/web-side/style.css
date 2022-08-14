@@ -2,12 +2,21 @@
 ::selection { background: transparent; }
 ::-moz-selection { background: transparent; }
 
+body {
+	font-family: "Roboto";
+}
+
+.Body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
 .container {
-	top: 20%;
-	right: 15%;
-	display: none;
-	position: absolute;
-	font-family: "Roboto",Arial,Helvetica,sans-serif;
+	display: block;
+	margin-right: 200px;
 }
 
 .btn {
@@ -15,21 +24,35 @@
 	border: none;
 	outline: none;
 	display: block;
-	margin-top: 5px;
 	font-size: 16px;
 	min-height: 30px;
 	max-height: 58px;
 	min-width: 280px;
 	border-radius: 3px;
-	padding: 20px 20px 20px 12px;
-	border-left: 5px solid #2e6e4c;
-	background: rgba(15,15,15,.85);
+	margin-bottom: 5px;
+	position: relative;
+	padding: 20px 20px 20px 14px;
+	background: rgba(15,15,15,.75);
 }
 
-.btn:hover {
-	color: #a0ceb6;
-	background: #2e6e4c;
-	border-left: 5px solid #225239;
+.btn::before, .normalbutton::before {
+	top: 20%;
+	left: -2px;
+	width: 4px;
+	height: 60%;
+	bottom: 20%;
+	content: "";
+	position: absolute;
+	border-radius: 3px;
+	background: #fec026;
+}
+
+.btn:hover, .normalbutton:hover {
+	background: rgba(10,10,10,.75);
+}
+
+.btn:hover::before, .normalbutton:hover::before {
+	background: #ffd97b;
 }
 
 .title {
@@ -47,28 +70,40 @@
 	letter-spacing: 0.8px;
 }
 
-.btn:hover > .title {
-	color: #a0ceb6;
+.description yellow {
+	color: #ffd97b;
 }
 
-.btn:hover > .description {
-	color: #7ea993;
+.normalbutton {
+	color: #ccc;
+	display: block;
+	font-size: 16px;
+	cursor: default;
+	min-width: 243px;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	position: relative;
+	padding: 20px 20px 12px 14px;
+	background: rgba(15,15,15,.75);
 }
 
-.titles {
-	float: left;
-	font-size: 15px;
-	margin-top: -9px;
-	text-align: left;
+.amarelo::before {
+	top: 20%;
+	left: -2px;
+	width: 4px;
+	height: 60%;
+	bottom: 20%;
+	content: "";
+	position: absolute;
+	border-radius: 3px;
+	background: #54c941;
 }
 
-#goback {
-	height: 10px;
-	color: #ece194;
-	background: #ad9d2c;
-	border-left: 5px solid #71661c;
+.amarelo:hover::before {
+	background: #80e470;
 }
 
-#goback:hover {
-	color: #f7efba;
+.amarelo .description {
+	color: #fff;
+	opacity: .4;
 }
