@@ -1,11 +1,11 @@
-# Creative-Main
+# Klaus
 
-> artifact folder is the fivem build (download fivem build [here](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/)). 
+> Projeto de uma base que eu tava fazendo a uns meses usem como quiser tem ate uns mapas do gabz ai pros passa fome vender
 
-> Full Original Server Files for Creative Roleplay Season 5
+> Developed by: summeRz#5002
 
-> unusable folder is the removed resources from the base files.
+> Enhanced and Improved by : Klausss#1162
 
-# Copyright
+> Talvez eu lance algum update para essa base algum dia..
 
-# Raze Store , Klausss#1162 ,
+> Addons (Pega da Summerz5 Da Hensa)
