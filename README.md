@@ -9,3 +9,5 @@
 > Talvez eu lance algum update para essa base algum dia..
 
 > Addons (Pega da Summerz5 Da Hensa)
+
+> Contem Bugs no WareHouse
